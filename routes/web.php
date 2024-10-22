@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ Route::get('/esempio/{id}/{categoria?}',[PageController::class,'esempio'])->name
 
 Route::get('/feedback',[PageController::class,'feedback'])->middleware('auth')->name('feedback');
 Route::post('/feedback',[PageController::class,'feedbackSend'])->middleware('auth')->name('feedback.send');
+
+//Article
+
+Route::resource('articles',ArticleController::class);

@@ -11,6 +11,7 @@
 
 <body>
     <x-navbar />
+    <x-success></x-success>
     <div>
         {{ $slot }}
     </div>
